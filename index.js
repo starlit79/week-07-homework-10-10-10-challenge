@@ -62,7 +62,6 @@ let player = [{
             power: 'Super strength'
         }
     }
-
 ]
 */
 
@@ -92,7 +91,6 @@ a message should appear in the terminal saying something like: "No odd numbers d
 In order to ride the child must be 7 years or older and be over 4ft tall.
 @Example - Using the given array show which children would be able to ride the rollercoaster.
 @Test - Make a function calle of 'heightRequirement()'.
-
 let children = [{
     age: 8,
     height: 4.1
