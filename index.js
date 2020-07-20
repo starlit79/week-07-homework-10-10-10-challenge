@@ -4,7 +4,11 @@
 @Test - Write a console.log that shows the result of 'toNumber('4')'
 */
 
+function toNumber(numString) {
+    return parseInt(numString)
+}
 
+//console.log(toNumber('4'))
 
 /*
 @Challenge 02 - Write a function named 'priceTotal' that uses the .reduce() method to subtract numbers in an array.
@@ -13,28 +17,42 @@
 */
 
 
+
 /*
 @Challenge 03 - Write a function called 'happyHour' that has an array of numbers from 16 to 25 and filter out all the number from 21 and up.
 @Example - When sent through the function 21, 22, 23, 24 and 25 should be the only numbers returning.
 @Test - Make a function call of 'happyHour()'
 */
+function happyHour(numArray) {
+    return numArray.filter((num)=>  num >= 21 )
+}
+console.log(happyHour([16, 25, 18, 21, 23, 24, 17]))
 
 /*
-@Challenge 04 - Write a function called 'breakTheNest' that has a nested object like the one shown, your goal is to show only the firstName and everything within "car" in a sentence.
+@Challenge 04 - Write a function called 'breakTheNest' that has a nested object like the one shown, your goal is to show only the 
+firstName and everything within "car" in a sentence.
 @Example - Your terminal should return something along the lines of "John drives a 2019 Ford Explorer"
 @Test - Make a function call of 'breakTheNest()'
-let person = {
+
+*/
+
+let person2 = {
     name: {
         firstName: 'John',
         lastName: 'Doe'
-    }
+    },
     car: {
         make: 'Ford',
-        model: 'Explorer'
+        model: 'Explorer',
         year: 2019
     }
 }
-*/
+
+function breakTheNest(person) {
+    return person.name.firstName + " drives a " + person2.car.year + " " + person.car.make + person.car.model
+}
+
+console.log(breakTheNest(person2))
 
 /*
 @Challenge 05 - Write a function called 'reverseErase' that takes an array of words, and takes a word and returns the new word without including the first character.
@@ -42,6 +60,11 @@ let person = {
 @Test - Make a function call of 'reverseErase()'
 */
 
+function reverseErase(wordArray) {
+    return wordArray.map((word) => word.slice(1))
+}
+
+console.log(reverseErase(['Apple', 'Cinnamon', 'Acorn', 'Bread']))
 /*
 @Challenge 06 - Write a function called 'characterSelect' that has an array of characters and you are tasked with having two players select their character.
 @Example - you should get something like: Player one chose Mr Maximus, Player two chose Dr Doof.
